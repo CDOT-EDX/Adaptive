@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div  style="width:800px; margin:auto; margin-top:50;">
+        <h3 align="center">Problems solving results of a student with an id: {{ student_id }}</h3>
+
+        <table border="1" cellpadding="10">
+            <tr align="center">
+                <td>problem code</td>
+                <td>attempts</td>
+                <td>grade</td>
+                <td>time took</td>
+            </tr>
+            {% for row in student_state %}
+            <tr>
+                <td> {{ row.problem_code }} </td>
+                <td align="center"> {{ row.attempts }} </td>
+                <td align="center"> {{ row.grade }}  %</td>
+                <td align="center"> {{ row.time_took }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

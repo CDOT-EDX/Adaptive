@@ -1,0 +1,47 @@
+{% extends 'testProject/base.html' %}
+
+{% block content %}
+    <div  style="width:800px; margin:auto; margin-top:50;">
+        {% for student_state in student_states %}
+            <h3 align="center">Problems solving results of a student with an id: {{ student_state.student_id }}</h3>
+
+            <table class="table">
+                <tr align="center" bgcolor="#0066FF"  style="color:#FFFFFF;">
+                    <td>problem code</td>
+                    <td>attempts</td>
+                    <td>grade</td>
+                    <td>time took</td>
+                </tr>
+                {% for chapter in student_state.chapters %}
+                <tr align="center" bgcolor="#006600"  style="color:#FFFFFF;">
+                    <td colspan="4">Chapter: {{ chapter.module_id}}</td>
+                </tr>
+                    {% for sequential in chapter.sequentials %}
+                    <tr align="center" bgcolor="#009900"  style="color:#FFFFFF;">
+                        <td colspan="4">Sequential: {{ sequential.module_id }}</td>
+                    </tr>
+                        {% for problem in sequential.problems %}
+                            <tr>
+                                <td> {{ problem.problem_code }} </td>
+                                <td align="center"> {{ problem.attempts }} </td>
+                                <td align="center"> {{ problem.grade }}  </td>
+                                <td align="center"> {{ problem.time_took }} </td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+                <tr align="center" bgcolor="#00CCFF"  style="color:#FFFFFF;">
+                    <td></td>
+                    <td>avg. attempts</td>
+                    <td>avg. grade</td>
+                    <td>avg. time took</td>
+                </tr>
+                <tr align="center" >
+                    <td></td>
+                    <td>{{ student_state.avg_attempts }}</td>
+                    <td>{{ student_state.avg_grade }}  %</td>
+                    <td>{{ student_state.avg_time_took }}</td>
+                </tr>
+            </table>
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+<!-- {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %} -->
+
+{% load static %}
+
+<body>
+    <table border="1" cellpadding="10">
+        <tr align = "center">
+            <td>student id</td>
+            <td>email address</td>
+        </tr>
+        {% for user in auth_user %}
+        <tr>
+            <td align = "center">{{ user.id }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>

@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 class student_courseenrollment(models.Model):
     id = models.IntegerField(null=True)
     user_id = models.IntegerField(null=True)

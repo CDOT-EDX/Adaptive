@@ -1,4 +1,4 @@
-f = open('../MySQL_Conf.txt')
+f = open('../../MySQL_Conf.txt')
 
 db_name = f.readline().strip()
 db_user = f.readline().strip()

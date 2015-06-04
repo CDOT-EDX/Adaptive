@@ -8,6 +8,16 @@ import re
 import datetime
 import copy
 from datetime import timedelta
+import pymongo
+import pdb
+
+connection = pymongo.MongoClient('localhost',27017)
+db = connection.mongo
+collection = db.modulestore.find() 
+
+    
+    
+#print item.definition
 
 # Global variables
 itemsPerProblem = 3
@@ -147,11 +157,12 @@ def specifiedCourse(request, course_id, student_id = None):
                         module_type = "problem"
                     )
 
+            
             # sum of all grades (will be used to calculate final grade)
             sumGrades = 0
-
+            
             for row in studentModule:
-
+            
                 # check if current problem_id is in passed problem_ids array
                 if any(row.module_id in s for s in enumerate(problem_ids)) or not problem_ids:
 
@@ -175,12 +186,12 @@ def specifiedCourse(request, course_id, student_id = None):
                                 matrixXrow[attemptsIndex] = attempts
                                 matrixXrow[timeTookIndex] = (row.modified - row.created).total_seconds()
 
-                                sumGrades += int ( row.grade / row.max_grade * 100 )
-
+                                sumGrades += int ( row.grade / row.max_grade * 100 )                 
             # adding final course grade
             matrixXrow.append(sumGrades / len(allCourseProblems))
             # adding current student row to matrix
             matrixX.append(matrixXrow)
+            
 
         '''
         # structure of matrixX:
@@ -198,8 +209,11 @@ def specifiedCourse(request, course_id, student_id = None):
         '''
 
         # creating data structure to send to the view
-        for studentId in student_ids:
 
+
+        
+        for studentId in student_ids:
+            
             # getting times of all course components (courses, chapters, sequentials, problems)
             timesModule = courseware_studentmodule.objects.filter(
                         course_id = course_id
@@ -213,9 +227,9 @@ def specifiedCourse(request, course_id, student_id = None):
                 moduleRow["module_type"] = row.module_type
                 moduleRow["module_id"] = row.module_id
                 moduleRow["created"] = row.created
-
+               
                 courseModules.append(moduleRow)
-
+            
             # sorting by times
             courseModules.sort(key=lambda x: x["created"])
 
@@ -231,15 +245,10 @@ def specifiedCourse(request, course_id, student_id = None):
             # creating an array of chapters
             for module in courseModules:
                 if module["module_type"] == "chapter":
-
-                    chapter = {};
+                    chapter = {}
                     chapter["module_id"] = module["module_id"].split("/chapter/", 1)[1]
-            # replacing module_id with the Module name         
-                    for i in chapter:
-                        if chapter[i] == "d3493fd85173401c97ccaea5a568ba13":
-                            chapter[i] = "Model 1"
-                        elif chapter[i] == "9214d00733ef411a856cac381b053e28":
-                            chapter[i] = "Module EdwardTest"   
+            
+
                     if chapCounter == 0:
                         chapter["created"] = lowestTime
                         chapCounter = 1
@@ -248,7 +257,20 @@ def specifiedCourse(request, course_id, student_id = None):
 
                     chapter["sequentials"] = []
                     chapters.append(chapter)
-        
+                    
+            coursed = []
+            # replacing module_id with the Module name
+            for i in range(0, len(chapters)):
+                for j in collection:
+                    if chapters[i]["module_id"] == j["_id"]["name"]:
+                        chapters[i]["module_id"] = j["metadata"]["display_name"]
+                collection.rewind()
+            #print chapters             
+            for course in studentModule: 
+                #print course 
+                if course == "course_id":
+                    coursed.append(course)
+            #print coursed    
             for i in range(0, len(chapters)):
 
                 sequentials = []
@@ -270,6 +292,7 @@ def specifiedCourse(request, course_id, student_id = None):
                             sequentials.append(sequential)
 
                 chapters[i]["sequentials"] = sequentials
+                
 
             # in order to get records of all students
             # studentModule = courseware_studentmodule.objects.all()

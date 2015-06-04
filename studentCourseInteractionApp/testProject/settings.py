@@ -1,5 +1,8 @@
 import os
 
+
+
+
 # path to project directory
 SETTINGS_DIR = os.path.dirname(__file__)
 
@@ -21,7 +24,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 # retrieving MySQL database information from a file:
-f = open('../MySQL_Info.txt')
+f = open('../../MySQL_Info.txt')
 
 db_name = f.readline().strip()
 db_user = f.readline().strip()

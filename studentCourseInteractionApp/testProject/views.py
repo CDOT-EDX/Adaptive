@@ -103,6 +103,13 @@ def courses(request):
 
     return render_to_response("testProject/courses.html", extra_context)
 
+def translate_mod_seq(loop_list):
+    for i in range(0,len(loop_list)):
+        for j in collection:
+            if loop_list[i]["module_id"] == j["_id"]["name"]:
+                        loop_list[i]["module_id"] = j["metadata"]["display_name"]
+        collection.rewind()
+
 
 def specifiedCourse(request, course_id, student_id = None):
 
@@ -259,14 +266,10 @@ def specifiedCourse(request, course_id, student_id = None):
 
                     chapter["sequentials"] = []
                     chapters.append(chapter)
-                    
+            translate_mod_seq(chapters)       
             coursed = []
             # replacing module_id with the Module name
-            for i in range(0, len(chapters)):
-                for j in collection:
-                    if chapters[i]["module_id"] == j["_id"]["name"]:
-                        chapters[i]["module_id"] = j["metadata"]["display_name"]
-                collection.rewind()
+            
             #print chapters             
             for course in studentModule: 
                 #print course 
@@ -293,16 +296,8 @@ def specifiedCourse(request, course_id, student_id = None):
                             sequential["problems"] = []
                             sequentials.append(sequential)
                 chapters[i]["sequentials"] = sequentials
-                #chnaging the sequntials names
-                for i in range(0, len(sequentials)):
-                    print sequentials[i]
-                    for j in collection:
-                        print sequentials[i]
-                        if sequentials[i]["module_id"] == j["_id"]["name"]:
-                            sequentials[i]["module_id"] = j["metadata"]["display_name"]
-                    collection.rewind()
-           
-               # print chapters[i]["sequentials"
+                #changing the sequntials names
+                translate_mod_seq(sequentials)
                 
 
             # in order to get records of all students

@@ -1,0 +1,517 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mod",
+				"module_id"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"chapters",
+				"chapters"
+			],
+			[
+				"in",
+				"in"
+			],
+			[
+				"module",
+				"modulestore"
+			],
+			[
+				"mo",
+				"module"
+			],
+			[
+				"co",
+				"connection_string"
+			],
+			[
+				"da",
+				"django"
+			],
+			[
+				"stu",
+				"studentModule"
+			],
+			[
+				"course",
+				"courseModules"
+			],
+			[
+				"sudent",
+				"student_ids"
+			],
+			[
+				"modul",
+				"module_name"
+			],
+			[
+				"cours",
+				"course_id"
+			],
+			[
+				"stude",
+				"student_id"
+			],
+			[
+				"st",
+				"student_id"
+			],
+			[
+				"cha",
+				"chapter"
+			],
+			[
+				"modu",
+				"module_name"
+			],
+			[
+				"ise",
+				"is-signedin"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"ope",
+				"open"
+			],
+			[
+				"na",
+				"nav"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "urls.py",
+			"settings":
+			{
+				"buffer_size": 901,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models.py",
+			"settings":
+			{
+				"buffer_size": 1135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "settings.py",
+			"settings":
+			{
+				"buffer_size": 6037,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views.py",
+			"settings":
+			{
+				"buffer_size": 15630,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 117.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/testProject/untitled.sublime-project",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/testProject/views.py",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/testProject/__init__.py",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/testProject/models.py",
+		"/home/pylyp/edX/dev/lib/python2.7/site-packages/pymongo/connection.py",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/templates/testProject/courses.html",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/testProject/urls.py",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/templates/testProject/state.html",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/templates/testProject/result.html",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/templates/testProject/courses/view_course.html",
+		"/home/pylyp/edX/adaptive_engine/__init__.py",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/testProject/settings.py",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/templates/testProject/index.html",
+		"/home/pylyp/edX/adaptive_engine/studentCourseInteractionApp/testProject/forms.py",
+		"/home/pylyp/devstack/edx-platform/cms/templates/widgets/header.html",
+		"/home/pylyp/devstack/edx-platform/cms/templates/base.html",
+		"/home/pylyp/devstack/edx-platform/cms/urls.py",
+		"/home/pylyp/xblock-sdk/script/xblockdata/requirements.txt",
+		"/home/pylyp/devstack/edx-platform/common/test/templates/theme-header.html",
+		"/home/pylyp/devstack/edx-platform/cms/static/js/views/paging_header.js",
+		"/home/pylyp/devstack/edx-platform/cms/templates/widgets/adaptive_engine.html",
+		"/home/pylyp/devstack/edx-platform/cms/templates/index.html",
+		"/home/pylyp/edX/adaptive_engine/database.py",
+		"/home/pylyp/devstack/edx-platform/manage.py",
+		"/home/pylyp/devstack/edx-platform/pavement.py",
+		"/home/pylyp/devstack/edx-platform/cms/static/js/index.js",
+		"/home/pylyp/devstack/edx-platform/setup.py",
+		"/home/pylyp/devstack/edx-platform/common/djangoapps/pipeline_mako/templates/static_content.html",
+		"/home/pylyp/devstack/edx-platform/xblock/xblock-simplevideo/setup.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"for j",
+			"print",
+			":\n",
+			"i",
+			"    \n",
+			"mongo",
+			"print",
+			"MONGODB_SETT",
+			"print",
+			"courseware_studentmodule",
+			"allCourseProblems",
+			"state.html",
+			"seqs[k]['module_id']",
+			"doc_url",
+			"get_online_help_info",
+			"Help",
+			"Link",
+			"Link\n",
+			"Link",
+			"<div id=\"content\"",
+			"<div id=\"content:",
+			"<a href=\"#\" class=",
+			"nav-account nav-is-signedin\n\n",
+			"nav-item nav-account-help",
+			"skip",
+			"wraper wraper-r",
+			"wraper-wraper",
+			"nav-item nav-account-help",
+			"nav-item"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1667,
+								1667
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8625,
+								8625
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4192.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"15":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"17":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 3
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

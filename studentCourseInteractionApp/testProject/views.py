@@ -13,7 +13,9 @@ import pdb
 
 connection = pymongo.MongoClient('localhost',27017)
 db = connection.mongo
-collection = db.modulestore.find() 
+collection = db.modulestore.find()
+for i in collection:
+    print i 
 
     
     
@@ -290,8 +292,17 @@ def specifiedCourse(request, course_id, student_id = None):
 
                             sequential["problems"] = []
                             sequentials.append(sequential)
-
                 chapters[i]["sequentials"] = sequentials
+                #chnaging the sequntials names
+                for i in range(0, len(sequentials)):
+                    print sequentials[i]
+                    for j in collection:
+                        print sequentials[i]
+                        if sequentials[i]["module_id"] == j["_id"]["name"]:
+                            sequentials[i]["module_id"] = j["metadata"]["display_name"]
+                    collection.rewind()
+           
+               # print chapters[i]["sequentials"
                 
 
             # in order to get records of all students
